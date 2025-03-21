@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* ヘッダーのスタイル */
+/* ヘッダー */
 header {
     width: 100%;
     height: 8vh;
@@ -14,6 +14,8 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: #000;
+    position: fixed;
+    margin-bottom: 2vh;
 }
 nav {
     display: flex;
@@ -38,6 +40,7 @@ nav {
 .nav_links.is_active li {
     opacity: 1;
 }
+
 /* ハンバーガーメニュー */
 .burger div {
     align-items: center;
@@ -61,6 +64,53 @@ nav {
 .is_active .line3 {
     transform: rotate(405deg) translate(-5px, -6px);
 }
+
+/* contents */
+main {
+    padding-top: 10vh;
+}
+
+/* About */
+#about {
+    width: 60%;
+    margin-inline: auto;
+    text-align: left;
+    padding-bottom: 20%;
+}
+
+/* profile */
+#profile {
+    width: 60%;
+    margin-inline: auto;
+    padding-bottom: 20%;
+}
+
+/* My_work */
+#my_work {
+    width: 60%;
+    margin-inline: auto;
+    padding-bottom: 20%;
+}
+#my_work img {
+    width: 10%;
+}
+
+/* contact */
+#contact {
+    width: 60%;
+    margin-inline: auto;
+    margin-bottom: 10vh;
+    text-align: left;
+}
+#contact input {
+    width: 80%;
+    height: 3vh;
+}
+#contact #contents {
+    height: 20vh;
+    margin-bottom: 10px;
+}
+
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
     body {
@@ -84,8 +134,7 @@ nav {
     .burger div {
         display: block;
     }
-}
-/* My_workの画像のスタイル */
-.my_work img {
-    width: 10%;
+    #my_work img {
+        width: 20%;
+    }
 }
