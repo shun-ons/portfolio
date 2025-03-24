@@ -16,12 +16,12 @@ header {
     background-color: #000;
     position: fixed;
     margin-bottom: 2vh;
+    z-index: 2;
 }
 nav {
     display: flex;
-}
-.logo {
-    color: #FFF;
+    position: absolute;
+    right: 3%;
 }
 .nav_links {
     display: flex;
@@ -81,6 +81,7 @@ nav {
     visibility: hidden;
     transition: 0.3s;
     flex-direction: column;
+    z-index: 3;
 }
 .loading.is_active {
     opacity: 1;
@@ -128,22 +129,67 @@ nav {
 
 /* contents */
 main {
+    background-color: #FFFEF9;
+    color: #00053a;
+}
+
+/* home */
+#hero {
     padding-top: 10vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: 'Impact',sans-serif;
+    opacity: 0;
+    background-color: #00053a;
+    color: #FFF;
+}
+.fade-target {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+h2 {
+    padding-bottom: 5%;
+    font-size: 3rem;
+    font-family: 'Impact',sans-serif;
+}
+p {
+    font-size: 1rem;
 }
 
 /* About */
 #about {
+    padding-top: 10%;
     width: 60%;
     margin-inline: auto;
     text-align: left;
     padding-bottom: 20%;
+    font-size: 1rem;
 }
+
 
 /* profile */
 #profile {
     width: 60%;
     margin-inline: auto;
     padding-bottom: 20%;
+}
+table {
+    font-size: 1.2rem;
+}
+th, td {
+    padding: 10px;
 }
 
 /* My_work */
@@ -160,6 +206,32 @@ main {
     transform: scale(2, 2);
     z-index: 1;
 }
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-btn {
+    margin-top: 15px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
 
 /* contact */
 #contact {

@@ -8,10 +8,6 @@
     <body>
         <!-- ヘッダー -->
         <header>
-            <!-- ロゴ -->
-            <div class="logo">
-                <h1 class="title">マイポートフォリオ</h1>
-            </div>
             <nav>
                 <!-- メニューバー -->
                 <ul class="nav_links">
@@ -36,11 +32,14 @@
             <div class="loading_text">Now Loading...</div>
         </div>
         <main>
+            <div id="hero">
+                <h1>My Portfolio</h1>
+            </div>
             <!-- 概要 -->
-            <div id="about">
+            <div class="fade-target" id="about">
                 <h2>Aboute</h2>
                 <p>
-                    　私は現在、大学で情報技術を学んでいる学生です。<br>
+                    　このサイトは、和歌山大学で情報技術を学んでいる学生のポートフォリオです。<br>
                     このポートフォリオは、私がこれまでに学んできたことや制作した成果物をまとめるために作成しました。<br>
                     現時点では自主制作したプロジェクトはまだ少ないですが、今後はさらに多くのアプリケーションやシステムを開発し、技術力を向上させていきたいと考えています。<br>
                     特に、Webアプリ開発や機械学習、画像認識といった分野に興味があり、実践的なプロジェクトを通じてスキルを磨いていく予定です。<br>
@@ -49,7 +48,7 @@
             </div>
 
             <!-- 自己紹介 -->
-            <div id="profile">
+            <div class="fade-target" id="profile">
                 <h2>Profile</h2>
                 <table>
                     <tr>
@@ -76,13 +75,25 @@
             </div>
 
             <!-- 作品集 -->
-            <div id="my_work">
-                <h2>My work</h2>
-                <img src="../static/img/shopping.jpg">
+            <div class="fade-target" id="my_work">
+                <h2>My works</h2>
+                <img src="../static/img/shopping.jpg" class="openModal" 
+                    data-src="../static/img/shopping.jpg"
+                    data-info="中古の教科書取引用のフリマサイトです。和歌山大学生同士での取引を想定しているため、受け渡しは日時と場所を指定して直接行います。詳しくはGitHubをご覧ください."
+                    data-link="https://github.com/shun-ons/web_application.git">
+            </div>
+            <!-- モーダル -->
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <img id="modal-image" src="" alt="説明画像">
+                    <p id="modal-text">ここに説明が入ります</p>
+                    <a id="modal-link" href="#" target="_blank">GitHubはこちら</a>
+                    <div class="close-btn" id="closeModal">閉じる</div>
+                </div>
             </div>
 
             <!-- 連絡先 -->
-            <div id="contact">
+            <div class="fade-target" id="contact">
                 <h2>Contact</h2>
                     <form action="#">
                     <p>Name</p>
