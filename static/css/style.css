@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000;
+    background-color: #00053a;
     position: fixed;
     margin-bottom: 2vh;
     z-index: 2;
@@ -72,7 +72,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #00053a;
     color: #FFF;
     display: flex;
     align-items: center;
@@ -244,7 +244,8 @@ th, td {
     width: 80%;
     height: 3vh;
 }
-#contact #contents {
+#contact textarea {
+    width: 80%;
     height: 20vh;
     margin-bottom: 10px;
 }

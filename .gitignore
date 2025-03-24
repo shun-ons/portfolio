@@ -1,1 +1,4 @@
 /portfolio_env/
+.env
+Dockerfile
+requirements.txt

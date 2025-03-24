@@ -95,13 +95,19 @@
             <!-- 連絡先 -->
             <div class="fade-target" id="contact">
                 <h2>Contact</h2>
-                    <form action="#">
+                {% if message %}
+                    <p style="color: green;">{{ message }}</p>
+                {% elif error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+
+                <form action="{{url_for('contact')}}" method="post">
                     <p>Name</p>
-                    <input type="text" id="name" name="name"/>
+                    <input type="text" id="name" name="name" required/>
                     <p>Email</p>
-                    <input type="email" id="email" name="email"/>
+                    <input type="email" id="email" name="email" required/>
                     <p>Contents</p>
-                    <input type="text" id="contents" name="contents"/><br>
+                    <textarea name="contents" rows="5" cols="40" required></textarea>
                     <input type="submit"/>
                 </form>
             </div>
