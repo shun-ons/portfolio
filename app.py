@@ -20,14 +20,24 @@ app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
 mail = Mail(app)
 
-@app.route('/index', methods=['GET'])
-def index():
+@app.route('/', methods=['GET'])
+def index() -> Response:
+    """ポートフォリオのサイトを表示する.
+
+    Returns:
+        Response: index.htmlに遷移.
+    """
     return render_template('index.html')
 
 
 
 @app.route('/contact', methods=['POST'])
-def contact():
+def contact() -> Response:
+    """フォームに入力した内容をメールとして送信する.
+
+    Returns:
+        Response: 処理を行ったあとindex.htmlに遷移.
+    """
     name = request.form.get('name')
     email = request.form.get('email')
     contents = request.form.get('contents')
