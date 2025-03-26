@@ -20,6 +20,7 @@ app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
 mail = Mail(app)
 
+
 @app.route('/', methods=['GET'])
 def index() -> Response:
     """ポートフォリオのサイトを表示する.

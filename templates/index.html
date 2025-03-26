@@ -77,18 +77,41 @@
             <!-- 作品集 -->
             <div class="fade-target" id="my_work">
                 <h2>My works</h2>
-                <img src="../static/img/shopping.jpg" class="openModal" 
-                    data-src="../static/img/shopping.jpg"
+                <img src="../static/img/shopping/icon.png" class="openModal" 
+                    data-src="../static/img/shopping/"
+                    data-imgs="itemlist_example.jpg,cart_example.jpg,notification_example.jpg,mypage_example.jpg"
+                    data-title="教科書用フリマサイト"
                     data-info="中古の教科書取引用のフリマサイトです。和歌山大学生同士での取引を想定しているため、受け渡しは日時と場所を指定して直接行います。詳しくはGitHubをご覧ください."
+                    data-tech="Java(Spring Framewok), jQuery, MySQL, AWS(ec2)"
                     data-link="https://github.com/shun-ons/web_application.git">
             </div>
+
             <!-- モーダル -->
             <div class="modal" id="modal">
                 <div class="modal-content">
-                    <img id="modal-image" src="" alt="説明画像">
-                    <p id="modal-text">ここに説明が入ります</p>
-                    <a id="modal-link" href="#" target="_blank">GitHubはこちら</a>
-                    <div class="close-btn" id="closeModal">閉じる</div>
+                    <div class="close-btn" id="closeModal">
+                        <img src="../static/img/close.svg">
+                    </div>
+                    <ul class="modal-details">
+                        <li class="modal-text">
+                            <h2 id="modal-title"></h2>
+                            <p id="modal-text"></p>
+                            <h2>主な使用技術</h2>
+                            <p id="modal-tech"></p>
+                            <a id="modal-link" href="#" target="_blank">
+                                <img id="github-mark" src="../static/img/github-mark.svg"/>
+                                GitHubはこちら
+                            </a>
+                        </li>
+                        <li class="images">
+                            <ul class="images-list">
+                                <li id="small-images"></li>
+                                <li id="large-images">
+                                    <img id="large-image" src="#" alt="説明画像">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

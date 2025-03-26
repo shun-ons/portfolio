@@ -217,21 +217,57 @@ th, td {
     align-items: center;
     z-index: 1000;
 }
-
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 500px;
+    width: 80%;
+    height: 60%;
     text-align: center;
 }
-
+.modal-details h2 {
+    font-size: 2rem;
+}
+.modal-details p {
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+}
+#github-mark {
+    width: 1rem;
+}
+.modal-content ul {
+    display: flex;
+    list-style: none;
+}
+li.modal-detail {
+    max-width: 33%;
+}
+li.images {
+    max-width: 67%;
+}
+.images-list {
+    display: flex;
+    flex-direction: column;
+}
+#small-images img{
+    max-width: 20%;
+}
+#large-images {
+    padding-top: 5%;
+}
+#large-images img {
+    max-width: 95%;
+}
 .close-btn {
+    padding-left: 90%;
+    right: 0;
     margin-top: 15px;
     cursor: pointer;
     color: #007BFF;
 }
-
+.close-btn img {
+    height: 3vh;
+}
 
 /* contact */
 #contact {
