@@ -222,7 +222,7 @@ th, td {
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    height: 60%;
+    height: 80%;
     text-align: center;
 }
 .modal-details h2 {
@@ -257,6 +257,7 @@ li.images {
 }
 #large-images img {
     max-width: 95%;
+    height: 30%;
 }
 .close-btn {
     padding-left: 90%;
@@ -304,6 +305,14 @@ li.images {
     }
     .nav_links li {
         opacity: 0;
+    }
+
+    .modal-details h2 {
+        font-size: 1rem;
+    }
+    .modal-details p {
+        font-size: 1rem;
+        padding-bottom: 5%;
     }
 
     .burger div {
