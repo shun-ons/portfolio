@@ -50,6 +50,7 @@ $(function() {
     $('.openModal').on('click', function () {
         var imgSrc = $(this).data('src');
         var imgNames = $(this).data('imgs').split(',');
+        console.log(imgNames);
         var title = $(this).data('title');
         var infoText = $(this).data('info');
         var tech = $(this).data('tech');
@@ -58,6 +59,7 @@ $(function() {
         $('#modal').css('display', 'flex');
         for (var imgName of imgNames) {
             var text = '<img class="modal-image" src=' + imgSrc + imgName + ' >';
+            console.log(text);
             $('#small-images').append(text)
         }
         $('#large-image').attr('src', imgSrc+imgNames[0])
@@ -72,6 +74,7 @@ $(function() {
 // モーダルを閉じる
 $(function() {
     $('#closeModal').on('click', function () {
+        $('.modal-image').remove();
         $('#modal').css('display', 'none');
     });
 });

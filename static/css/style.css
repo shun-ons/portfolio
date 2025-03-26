@@ -307,12 +307,38 @@ li.images {
         opacity: 0;
     }
 
+    #hero {
+        width: 100vw;
+        font-size: 1rem;
+    }
+    
+    #profile {
+        margin-left: 0;
+    }
+    #profile h2 {
+        margin-inline: 30%;
+    }
+    table {
+        font-size: 1rem;
+        width: 80%;
+    }
+
     .modal-details h2 {
         font-size: 1rem;
     }
     .modal-details p {
         font-size: 1rem;
         padding-bottom: 5%;
+    }
+    .modal-content ul {
+        display: block;
+    }
+    li.modal-detail {
+        max-width: 100%;
+    }
+    li.images {
+        margin-top: 30%;
+        max-width: 100%;
     }
 
     .burger div {
