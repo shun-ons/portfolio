@@ -256,8 +256,7 @@ li.images {
     padding-top: 5%;
 }
 #large-images img {
-    max-width: 95%;
-    height: 30%;
+    aspect-ratio: 2;
 }
 .close-btn {
     padding-left: 90%;
