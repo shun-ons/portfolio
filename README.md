@@ -32,6 +32,7 @@
 |Werkzeug          |3.1.3    |
 
 ## ディレクトリ構成
+```
 .
 ├── Dockerfile
 ├── README.md
@@ -58,6 +59,7 @@
 │       └── script.js
 └── templates
     └── index.html
+```
 
 # 環境変数
 - MAIL_USERNAME: メールを受け取り手のメールアドレス
