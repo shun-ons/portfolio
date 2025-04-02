@@ -4,7 +4,6 @@ from flask import Flask,  request, render_template
 from flask_mail import Mail, Message
 from flask_cors import CORS
 from flask import Response
-import json
 
 load_dotenv()
 app = Flask(__name__)
@@ -50,7 +49,7 @@ def contact() -> Response:
         msg = Message(subject='ポートフォリオからのお問い合わせ', recipients=[os.environ.get('MAIL_USERNAME')])
         msg.body = f'お名前: {name}\nメアド: {email}\n内容:\n {contents}'
         mail.send(msg)    
-        return render_template('index.html', message="お問い合わせが送信されました!")
+        return render_template('send.html')
     
     except Exception as e:
         return render_template('index.html', error=f'送信に失敗しました. {str(e)}')

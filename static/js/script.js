@@ -55,6 +55,7 @@ $(function() {
         var infoText = $(this).data('info');
         var tech = $(this).data('tech');
         var linkUrl = $(this).data('link');
+        var githubUrl = $(this).data('github');
     
         $('#modal').css('display', 'flex');
         for (var imgName of imgNames) {
@@ -67,6 +68,7 @@ $(function() {
         $('#modal-text').text(infoText);
         $('#modal-tech').text(tech);
         $('#modal-link').attr('href', linkUrl);
+        $('#modal-github').attr('href', githubUrl);
         $('#modal').fadeIn();
     });
 });

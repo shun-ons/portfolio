@@ -84,14 +84,16 @@
                     data-title="教科書用フリマサイト"
                     data-info="中古の教科書取引用のフリマサイトです。私と友人二人の計三人で作成しました。和歌山大学生同士での取引を想定しているため、受け渡しは日時と場所を指定して直接行います。詳しくはGitHubをご覧ください."
                     data-tech="Java(Spring Framewok), JavaScript(jQuery), MySQL, AWS(ec2)"
-                    data-link="https://github.com/shun-ons/web_application.git">
+                    data-link="https://wadaitext.f5.si"
+                    data-github="https://github.com/shun-ons/web_application.git">
                 <img src="../static/img/myPortfolio/myPortfolio.jpg" class="openModal"
                     data-src="../static/img/myPortfolio/"
                     data-imgs="hero.jpg,about.jpg,contact.jpg"
                     data-title="ポートフォリオ"
                     data-info="このポートフォリオサイトです。デザインやメールフォームのコーディングからデプロイまですべて一人で行いました。"
                     data-tech="JavaScript(jQuery), Python(Flask), Render"
-                    data-link="https://github.com/shun-ons/portfolio.git">
+                    data-link="https://portfolio-napl.onrender.com"
+                    data-github="https://github.com/shun-ons/portfolio.git">
             </div>
 
             <!-- モーダル -->
@@ -106,7 +108,8 @@
                             <p id="modal-text"></p>
                             <h2>主な使用技術</h2>
                             <p id="modal-tech"></p>
-                            <a id="modal-link" href="#" target="_blank">
+                            <a id="modal-link" href="#" target="_blank">サンプルサイトはこちら</a><br>
+                            <a id="modal-github" href="#" target="_blank">
                                 <img id="github-mark" src="../static/img/github-mark.svg"/>
                                 GitHubはこちら
                             </a>
@@ -126,12 +129,6 @@
             <!-- 連絡先 -->
             <div class="fade-target" id="contact">
                 <h2>Contact</h2>
-                {% if message %}
-                    <p style="color: green;">{{ message }}</p>
-                {% elif error %}
-                    <p style="color: red;">{{ error }}</p>
-                {% endif %}
-
                 <form action="{{url_for('contact')}}" method="post">
                     <p>Name</p>
                     <input type="text" id="name" name="name" required/>

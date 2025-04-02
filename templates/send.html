@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ポートフォリオ</title>
+        <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+            <nav>
+                <!-- メニューバー -->
+                <ul class="nav_links">
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="#about">概要</a></li>
+                    <li><a href="#profile">自己紹介</a></li>
+                    <li><a href="#my_work">作品集</a></li>
+                    <li><a href="#contact">連絡先</a></li>
+                </ul>
+                <!-- ハンバーガーメニュー -->
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="message">
+                {% if error %}
+                    <h2>送信に失敗しました。</h2>
+                    <p>
+                        入力内容をご確認のうえ、もう一度送信ください。<br>
+                        {{ error }}
+                    </p>
+                {% else %}
+                    <h2>メールを送信しました!!</h2>
+                    <p>メールを確認しましたら返信いたしますので、しばらくお待ちください。</p>
+                {% endif %}
+                <a href="/">戻る</a>
+            </div>
+        </main>
+        <!-- jsファイルの読み込み -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="../static/js/script.js"></script>
+    </body>

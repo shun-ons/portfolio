@@ -287,6 +287,12 @@ li.images {
     margin-bottom: 10px;
 }
 
+/* メール送信後のメッセージ */
+.message {
+    height: 100vh;
+    padding-top: 10vh;
+}
+
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
     body {
